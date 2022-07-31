@@ -14,14 +14,9 @@ namespace MorseCodeTranslator
         [STAThread]
         static void Main()
         {
-
-
-
-            #region Default Statements
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MorseCodeTranslator());
-            #endregion
         }
     }
 }

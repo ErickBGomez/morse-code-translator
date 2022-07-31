@@ -31,21 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MorseCodeTranslator));
             this.inputTextBox = new System.Windows.Forms.TextBox();
             this.enterInputGroupBox = new System.Windows.Forms.GroupBox();
+            this.translateButton = new System.Windows.Forms.Button();
             this.typeOfInputGroupBox = new System.Windows.Forms.GroupBox();
             this.morseCodeGroupBox = new System.Windows.Forms.RadioButton();
             this.plainTextRadioButton = new System.Windows.Forms.RadioButton();
             this.outputGroupBox = new System.Windows.Forms.GroupBox();
-            this.backgroundPanel = new System.Windows.Forms.Panel();
-            this.outputLabel = new System.Windows.Forms.Label();
             this.creditsLabel = new System.Windows.Forms.Label();
             this.creditsLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.translateButton = new System.Windows.Forms.Button();
+            this.creditsPictureBox = new System.Windows.Forms.PictureBox();
+            this.outputBGPanel = new System.Windows.Forms.Panel();
+            this.outputTextBox = new System.Windows.Forms.TextBox();
+            this.copyOutputButton = new System.Windows.Forms.Button();
+            this.textCopiedLabel = new System.Windows.Forms.Label();
             this.enterInputGroupBox.SuspendLayout();
             this.typeOfInputGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
-            this.backgroundPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).BeginInit();
+            this.outputBGPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // inputTextBox
@@ -60,6 +62,14 @@
             resources.ApplyResources(this.enterInputGroupBox, "enterInputGroupBox");
             this.enterInputGroupBox.Name = "enterInputGroupBox";
             this.enterInputGroupBox.TabStop = false;
+            // 
+            // translateButton
+            // 
+            this.translateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.translateButton, "translateButton");
+            this.translateButton.Name = "translateButton";
+            this.translateButton.UseVisualStyleBackColor = true;
+            this.translateButton.Click += new System.EventHandler(this.translateButton_Click);
             // 
             // typeOfInputGroupBox
             // 
@@ -88,22 +98,12 @@
             // 
             // outputGroupBox
             // 
-            this.outputGroupBox.Controls.Add(this.backgroundPanel);
+            this.outputGroupBox.Controls.Add(this.textCopiedLabel);
+            this.outputGroupBox.Controls.Add(this.copyOutputButton);
+            this.outputGroupBox.Controls.Add(this.outputBGPanel);
             resources.ApplyResources(this.outputGroupBox, "outputGroupBox");
             this.outputGroupBox.Name = "outputGroupBox";
             this.outputGroupBox.TabStop = false;
-            // 
-            // backgroundPanel
-            // 
-            this.backgroundPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.backgroundPanel.Controls.Add(this.outputLabel);
-            resources.ApplyResources(this.backgroundPanel, "backgroundPanel");
-            this.backgroundPanel.Name = "backgroundPanel";
-            // 
-            // outputLabel
-            // 
-            resources.ApplyResources(this.outputLabel, "outputLabel");
-            this.outputLabel.Name = "outputLabel";
             // 
             // creditsLabel
             // 
@@ -120,25 +120,46 @@
             this.creditsLinkLabel.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.creditsLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.creditsLinkLabel_LinkClicked);
             // 
-            // pictureBox2
+            // creditsPictureBox
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            this.creditsPictureBox.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.creditsPictureBox, "creditsPictureBox");
+            this.creditsPictureBox.Name = "creditsPictureBox";
+            this.creditsPictureBox.TabStop = false;
             // 
-            // translateButton
+            // outputBGPanel
             // 
-            resources.ApplyResources(this.translateButton, "translateButton");
-            this.translateButton.Name = "translateButton";
-            this.translateButton.UseVisualStyleBackColor = true;
-            this.translateButton.Click += new System.EventHandler(this.translateButton_Click);
+            this.outputBGPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.outputBGPanel.Controls.Add(this.outputTextBox);
+            resources.ApplyResources(this.outputBGPanel, "outputBGPanel");
+            this.outputBGPanel.Name = "outputBGPanel";
+            // 
+            // outputTextBox
+            // 
+            this.outputTextBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.outputTextBox, "outputTextBox");
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.ReadOnly = true;
+            // 
+            // copyOutputButton
+            // 
+            resources.ApplyResources(this.copyOutputButton, "copyOutputButton");
+            this.copyOutputButton.Name = "copyOutputButton";
+            this.copyOutputButton.UseVisualStyleBackColor = true;
+            this.copyOutputButton.Click += new System.EventHandler(this.copyOutputButton_Click);
+            // 
+            // textCopiedLabel
+            // 
+            resources.ApplyResources(this.textCopiedLabel, "textCopiedLabel");
+            this.textCopiedLabel.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.textCopiedLabel.Name = "textCopiedLabel";
             // 
             // MorseCodeTranslator
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.creditsPictureBox);
             this.Controls.Add(this.creditsLinkLabel);
             this.Controls.Add(this.creditsLabel);
             this.Controls.Add(this.outputGroupBox);
@@ -151,9 +172,10 @@
             this.typeOfInputGroupBox.ResumeLayout(false);
             this.typeOfInputGroupBox.PerformLayout();
             this.outputGroupBox.ResumeLayout(false);
-            this.backgroundPanel.ResumeLayout(false);
-            this.backgroundPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.outputGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).EndInit();
+            this.outputBGPanel.ResumeLayout(false);
+            this.outputBGPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,12 +188,14 @@
         private System.Windows.Forms.RadioButton morseCodeGroupBox;
         private System.Windows.Forms.RadioButton plainTextRadioButton;
         private System.Windows.Forms.GroupBox outputGroupBox;
-        private System.Windows.Forms.Label outputLabel;
-        private System.Windows.Forms.Panel backgroundPanel;
         private System.Windows.Forms.Label creditsLabel;
         private System.Windows.Forms.LinkLabel creditsLinkLabel;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox creditsPictureBox;
         private System.Windows.Forms.Button translateButton;
+        private System.Windows.Forms.Panel outputBGPanel;
+        private System.Windows.Forms.TextBox outputTextBox;
+        private System.Windows.Forms.Label textCopiedLabel;
+        private System.Windows.Forms.Button copyOutputButton;
     }
 }
 
