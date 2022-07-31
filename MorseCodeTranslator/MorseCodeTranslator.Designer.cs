@@ -33,15 +33,19 @@
             this.translateButton = new System.Windows.Forms.Button();
             this.enterInputGroupBox = new System.Windows.Forms.GroupBox();
             this.typeOfInputGroupBox = new System.Windows.Forms.GroupBox();
-            this.plainTextRadioButton = new System.Windows.Forms.RadioButton();
             this.morseCodeGroupBox = new System.Windows.Forms.RadioButton();
+            this.plainTextRadioButton = new System.Windows.Forms.RadioButton();
             this.outputGroupBox = new System.Windows.Forms.GroupBox();
-            this.outputLabel = new System.Windows.Forms.Label();
             this.backgroundPanel = new System.Windows.Forms.Panel();
+            this.outputLabel = new System.Windows.Forms.Label();
+            this.creditsLabel = new System.Windows.Forms.Label();
+            this.creditsLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.enterInputGroupBox.SuspendLayout();
             this.typeOfInputGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
             this.backgroundPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // inputTextBox
@@ -51,6 +55,7 @@
             // 
             // translateButton
             // 
+            this.translateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.translateButton, "translateButton");
             this.translateButton.Name = "translateButton";
             this.translateButton.UseVisualStyleBackColor = true;
@@ -68,23 +73,26 @@
             // 
             this.typeOfInputGroupBox.Controls.Add(this.morseCodeGroupBox);
             this.typeOfInputGroupBox.Controls.Add(this.plainTextRadioButton);
+            this.typeOfInputGroupBox.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.typeOfInputGroupBox, "typeOfInputGroupBox");
             this.typeOfInputGroupBox.Name = "typeOfInputGroupBox";
             this.typeOfInputGroupBox.TabStop = false;
+            // 
+            // morseCodeGroupBox
+            // 
+            resources.ApplyResources(this.morseCodeGroupBox, "morseCodeGroupBox");
+            this.morseCodeGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.morseCodeGroupBox.Name = "morseCodeGroupBox";
+            this.morseCodeGroupBox.UseVisualStyleBackColor = true;
             // 
             // plainTextRadioButton
             // 
             resources.ApplyResources(this.plainTextRadioButton, "plainTextRadioButton");
             this.plainTextRadioButton.Checked = true;
+            this.plainTextRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.plainTextRadioButton.Name = "plainTextRadioButton";
             this.plainTextRadioButton.TabStop = true;
             this.plainTextRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // morseCodeGroupBox
-            // 
-            resources.ApplyResources(this.morseCodeGroupBox, "morseCodeGroupBox");
-            this.morseCodeGroupBox.Name = "morseCodeGroupBox";
-            this.morseCodeGroupBox.UseVisualStyleBackColor = true;
             // 
             // outputGroupBox
             // 
@@ -93,11 +101,6 @@
             this.outputGroupBox.Name = "outputGroupBox";
             this.outputGroupBox.TabStop = false;
             // 
-            // outputLabel
-            // 
-            resources.ApplyResources(this.outputLabel, "outputLabel");
-            this.outputLabel.Name = "outputLabel";
-            // 
             // backgroundPanel
             // 
             this.backgroundPanel.BackColor = System.Drawing.Color.Gainsboro;
@@ -105,10 +108,39 @@
             resources.ApplyResources(this.backgroundPanel, "backgroundPanel");
             this.backgroundPanel.Name = "backgroundPanel";
             // 
+            // outputLabel
+            // 
+            resources.ApplyResources(this.outputLabel, "outputLabel");
+            this.outputLabel.Name = "outputLabel";
+            // 
+            // creditsLabel
+            // 
+            resources.ApplyResources(this.creditsLabel, "creditsLabel");
+            this.creditsLabel.Name = "creditsLabel";
+            // 
+            // creditsLinkLabel
+            // 
+            this.creditsLinkLabel.ActiveLinkColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.creditsLinkLabel, "creditsLinkLabel");
+            this.creditsLinkLabel.LinkColor = System.Drawing.Color.SeaGreen;
+            this.creditsLinkLabel.Name = "creditsLinkLabel";
+            this.creditsLinkLabel.TabStop = true;
+            this.creditsLinkLabel.VisitedLinkColor = System.Drawing.Color.SteelBlue;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
             // MorseCodeTranslator
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.creditsLinkLabel);
+            this.Controls.Add(this.creditsLabel);
             this.Controls.Add(this.outputGroupBox);
             this.Controls.Add(this.typeOfInputGroupBox);
             this.Controls.Add(this.enterInputGroupBox);
@@ -121,7 +153,9 @@
             this.outputGroupBox.ResumeLayout(false);
             this.backgroundPanel.ResumeLayout(false);
             this.backgroundPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -135,6 +169,9 @@
         private System.Windows.Forms.GroupBox outputGroupBox;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Panel backgroundPanel;
+        private System.Windows.Forms.Label creditsLabel;
+        private System.Windows.Forms.LinkLabel creditsLinkLabel;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

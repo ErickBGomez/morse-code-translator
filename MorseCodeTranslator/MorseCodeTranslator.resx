@@ -186,7 +186,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;enterInputGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;morseCodeGroupBox.Name" xml:space="preserve">
+    <value>morseCodeGroupBox</value>
+  </data>
+  <data name="&gt;&gt;morseCodeGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;morseCodeGroupBox.Parent" xml:space="preserve">
+    <value>typeOfInputGroupBox</value>
+  </data>
+  <data name="&gt;&gt;morseCodeGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;plainTextRadioButton.Name" xml:space="preserve">
+    <value>plainTextRadioButton</value>
+  </data>
+  <data name="&gt;&gt;plainTextRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;plainTextRadioButton.Parent" xml:space="preserve">
+    <value>typeOfInputGroupBox</value>
+  </data>
+  <data name="&gt;&gt;plainTextRadioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="typeOfInputGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="typeOfInputGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 47</value>
+  </data>
+  <data name="typeOfInputGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="typeOfInputGroupBox.Text" xml:space="preserve">
+    <value>Type of Input:</value>
+  </data>
+  <data name="&gt;&gt;typeOfInputGroupBox.Name" xml:space="preserve">
+    <value>typeOfInputGroupBox</value>
+  </data>
+  <data name="&gt;&gt;typeOfInputGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;typeOfInputGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;typeOfInputGroupBox.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="morseCodeGroupBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -242,69 +290,6 @@
   <data name="&gt;&gt;plainTextRadioButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="typeOfInputGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 13</value>
-  </data>
-  <data name="typeOfInputGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 47</value>
-  </data>
-  <data name="typeOfInputGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="typeOfInputGroupBox.Text" xml:space="preserve">
-    <value>Type of Input:</value>
-  </data>
-  <data name="&gt;&gt;typeOfInputGroupBox.Name" xml:space="preserve">
-    <value>typeOfInputGroupBox</value>
-  </data>
-  <data name="&gt;&gt;typeOfInputGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;typeOfInputGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;typeOfInputGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="outputLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="outputLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
-  </data>
-  <data name="outputLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 9</value>
-  </data>
-  <data name="outputLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 13</value>
-  </data>
-  <data name="outputLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="outputLabel.Text" xml:space="preserve">
-    <value>Your output will be displayed here.</value>
-  </data>
-  <data name="&gt;&gt;outputLabel.Name" xml:space="preserve">
-    <value>outputLabel</value>
-  </data>
-  <data name="&gt;&gt;outputLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;outputLabel.Parent" xml:space="preserve">
-    <value>backgroundPanel</value>
-  </data>
-  <data name="&gt;&gt;outputLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="backgroundPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 20</value>
-  </data>
-  <data name="backgroundPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 100</value>
-  </data>
-  <data name="backgroundPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;backgroundPanel.Name" xml:space="preserve">
     <value>backgroundPanel</value>
   </data>
@@ -339,6 +324,166 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;outputGroupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Name" xml:space="preserve">
+    <value>outputLabel</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="backgroundPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 20</value>
+  </data>
+  <data name="backgroundPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 100</value>
+  </data>
+  <data name="backgroundPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Name" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Parent" xml:space="preserve">
+    <value>outputGroupBox</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="outputLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="outputLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
+  </data>
+  <data name="outputLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 9</value>
+  </data>
+  <data name="outputLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 13</value>
+  </data>
+  <data name="outputLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="outputLabel.Text" xml:space="preserve">
+    <value>Your output will be displayed here.</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Name" xml:space="preserve">
+    <value>outputLabel</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="creditsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="creditsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 293</value>
+  </data>
+  <data name="creditsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="creditsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="creditsLabel.Text" xml:space="preserve">
+    <value>Made by:</value>
+  </data>
+  <data name="&gt;&gt;creditsLabel.Name" xml:space="preserve">
+    <value>creditsLabel</value>
+  </data>
+  <data name="&gt;&gt;creditsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;creditsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;creditsLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="creditsLinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="creditsLinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tw Cen MT, 9.75pt, style=Bold, Italic</value>
+  </data>
+  <data name="creditsLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>218, 293</value>
+  </data>
+  <data name="creditsLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 15</value>
+  </data>
+  <data name="creditsLinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="creditsLinkLabel.Text" xml:space="preserve">
+    <value>Erick B. Gómez</value>
+  </data>
+  <data name="&gt;&gt;creditsLinkLabel.Name" xml:space="preserve">
+    <value>creditsLinkLabel</value>
+  </data>
+  <data name="&gt;&gt;creditsLinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;creditsLinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;creditsLinkLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
+        JwAAECcBUfGu8QAAAWtJREFUWEe11jFOxTAQBFC3XImaa3ALOqTfcQYKxGk4CtyAFinsWllrPB7bwQmR
+        HvrZnZ20pG3bltjjfwreHyWHCn9whu975BBx8V9xH5NDZ88PFp10U99wetgWXIK/49oBHV2t+V71QuH/
+        Un2zehkFaTczuq125QeFXOyQPS9q7uz56MxLZyi7PXDDZYjQWdzryq4XcBE6i3tD3s0CV+DesO/00jxh
+        yRnUi96MXNidLlvF/UAO7UYXreJ+IId2o4tWcT+QQ7vRRau4H8ih3eiiVdwP5NBudNEq7gdy6N5V0Qrq
+        ZemZBgUXreLekHejgPP9GdyH8n4W2j1E4VH2fMK9lHNwUC14hmLPODdSbnrHs3kP53tKPn7kFxVI6VXN
+        ezDbU+XxJQ86waPwXmnyzcD+rRodzOCtcNfkeZCHKd3DUYWzjPOBc0EOA5c4zjDOO84gOUT2fB0tc5g1
+        jyqD5LDHnm81R/5hnvVt6RdJ3XRmqNTBFAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 288</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -348,9 +493,8 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>310, 287</value>
+    <value>310, 321</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
