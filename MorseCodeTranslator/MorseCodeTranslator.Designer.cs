@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MorseCodeTranslator));
             this.inputTextBox = new System.Windows.Forms.TextBox();
-            this.translateButton = new System.Windows.Forms.Button();
             this.enterInputGroupBox = new System.Windows.Forms.GroupBox();
             this.typeOfInputGroupBox = new System.Windows.Forms.GroupBox();
             this.morseCodeGroupBox = new System.Windows.Forms.RadioButton();
@@ -41,6 +40,7 @@
             this.creditsLabel = new System.Windows.Forms.Label();
             this.creditsLinkLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.translateButton = new System.Windows.Forms.Button();
             this.enterInputGroupBox.SuspendLayout();
             this.typeOfInputGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
@@ -53,18 +53,10 @@
             resources.ApplyResources(this.inputTextBox, "inputTextBox");
             this.inputTextBox.Name = "inputTextBox";
             // 
-            // translateButton
-            // 
-            this.translateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.translateButton, "translateButton");
-            this.translateButton.Name = "translateButton";
-            this.translateButton.UseVisualStyleBackColor = true;
-            this.translateButton.Click += new System.EventHandler(this.button1_Click);
-            // 
             // enterInputGroupBox
             // 
-            this.enterInputGroupBox.Controls.Add(this.inputTextBox);
             this.enterInputGroupBox.Controls.Add(this.translateButton);
+            this.enterInputGroupBox.Controls.Add(this.inputTextBox);
             resources.ApplyResources(this.enterInputGroupBox, "enterInputGroupBox");
             this.enterInputGroupBox.Name = "enterInputGroupBox";
             this.enterInputGroupBox.TabStop = false;
@@ -126,6 +118,7 @@
             this.creditsLinkLabel.Name = "creditsLinkLabel";
             this.creditsLinkLabel.TabStop = true;
             this.creditsLinkLabel.VisitedLinkColor = System.Drawing.Color.SteelBlue;
+            this.creditsLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.creditsLinkLabel_LinkClicked);
             // 
             // pictureBox2
             // 
@@ -133,6 +126,13 @@
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            // 
+            // translateButton
+            // 
+            resources.ApplyResources(this.translateButton, "translateButton");
+            this.translateButton.Name = "translateButton";
+            this.translateButton.UseVisualStyleBackColor = true;
+            this.translateButton.Click += new System.EventHandler(this.translateButton_Click);
             // 
             // MorseCodeTranslator
             // 
@@ -161,7 +161,6 @@
 
         #endregion
         private System.Windows.Forms.TextBox inputTextBox;
-        private System.Windows.Forms.Button translateButton;
         private System.Windows.Forms.GroupBox enterInputGroupBox;
         private System.Windows.Forms.GroupBox typeOfInputGroupBox;
         private System.Windows.Forms.RadioButton morseCodeGroupBox;
@@ -172,6 +171,7 @@
         private System.Windows.Forms.Label creditsLabel;
         private System.Windows.Forms.LinkLabel creditsLinkLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button translateButton;
     }
 }
 

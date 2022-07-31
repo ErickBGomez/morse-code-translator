@@ -138,7 +138,7 @@
     <value>enterInputGroupBox</value>
   </data>
   <data name="&gt;&gt;inputTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="translateButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>201, 16</value>
@@ -162,7 +162,7 @@
     <value>enterInputGroupBox</value>
   </data>
   <data name="&gt;&gt;translateButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="enterInputGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 66</value>
@@ -290,27 +290,6 @@
   <data name="&gt;&gt;plainTextRadioButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;outputLabel.Name" xml:space="preserve">
-    <value>outputLabel</value>
-  </data>
-  <data name="&gt;&gt;outputLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;outputLabel.Parent" xml:space="preserve">
-    <value>backgroundPanel</value>
-  </data>
-  <data name="&gt;&gt;outputLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="backgroundPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 20</value>
-  </data>
-  <data name="backgroundPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 100</value>
-  </data>
-  <data name="backgroundPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;backgroundPanel.Name" xml:space="preserve">
     <value>backgroundPanel</value>
   </data>
@@ -346,6 +325,39 @@
   </data>
   <data name="&gt;&gt;outputGroupBox.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Name" xml:space="preserve">
+    <value>outputLabel</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;outputLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="backgroundPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 20</value>
+  </data>
+  <data name="backgroundPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 100</value>
+  </data>
+  <data name="backgroundPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Name" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Parent" xml:space="preserve">
+    <value>outputGroupBox</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="outputLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

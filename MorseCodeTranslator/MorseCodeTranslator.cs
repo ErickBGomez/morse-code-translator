@@ -17,19 +17,16 @@ namespace MorseCodeTranslator
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void translateButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void creditsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
+            System.Diagnostics.Process.Start("https://github.com/ErickBGomez");
         }
     }
 }
