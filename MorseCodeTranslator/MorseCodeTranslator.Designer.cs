@@ -43,6 +43,7 @@
             this.creditsLabel = new System.Windows.Forms.Label();
             this.creditsLinkLabel = new System.Windows.Forms.LinkLabel();
             this.creditsPictureBox = new System.Windows.Forms.PictureBox();
+            this.helpButton = new System.Windows.Forms.Button();
             this.enterInputGroupBox.SuspendLayout();
             this.typeOfInputGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
@@ -157,10 +158,17 @@
             this.creditsPictureBox.Name = "creditsPictureBox";
             this.creditsPictureBox.TabStop = false;
             // 
+            // helpButton
+            // 
+            resources.ApplyResources(this.helpButton, "helpButton");
+            this.helpButton.Name = "helpButton";
+            this.helpButton.UseVisualStyleBackColor = true;
+            // 
             // MorseCodeTranslator
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.creditsPictureBox);
             this.Controls.Add(this.creditsLinkLabel);
             this.Controls.Add(this.creditsLabel);
@@ -200,6 +208,7 @@
         private System.Windows.Forms.Label textCopiedLabel;
         private System.Windows.Forms.Button copyOutputButton;
         private System.Windows.Forms.PictureBox creditsPictureBox;
+        private System.Windows.Forms.Button helpButton;
     }
 }
 
