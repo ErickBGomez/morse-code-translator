@@ -36,18 +36,18 @@
             this.morseCodeGroupBox = new System.Windows.Forms.RadioButton();
             this.plainTextRadioButton = new System.Windows.Forms.RadioButton();
             this.outputGroupBox = new System.Windows.Forms.GroupBox();
+            this.textCopiedLabel = new System.Windows.Forms.Label();
+            this.copyOutputButton = new System.Windows.Forms.Button();
+            this.outputBGPanel = new System.Windows.Forms.Panel();
+            this.outputTextBox = new System.Windows.Forms.TextBox();
             this.creditsLabel = new System.Windows.Forms.Label();
             this.creditsLinkLabel = new System.Windows.Forms.LinkLabel();
             this.creditsPictureBox = new System.Windows.Forms.PictureBox();
-            this.outputBGPanel = new System.Windows.Forms.Panel();
-            this.outputTextBox = new System.Windows.Forms.TextBox();
-            this.copyOutputButton = new System.Windows.Forms.Button();
-            this.textCopiedLabel = new System.Windows.Forms.Label();
             this.enterInputGroupBox.SuspendLayout();
             this.typeOfInputGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).BeginInit();
             this.outputBGPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // inputTextBox
@@ -105,6 +105,34 @@
             this.outputGroupBox.Name = "outputGroupBox";
             this.outputGroupBox.TabStop = false;
             // 
+            // textCopiedLabel
+            // 
+            resources.ApplyResources(this.textCopiedLabel, "textCopiedLabel");
+            this.textCopiedLabel.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.textCopiedLabel.Name = "textCopiedLabel";
+            // 
+            // copyOutputButton
+            // 
+            resources.ApplyResources(this.copyOutputButton, "copyOutputButton");
+            this.copyOutputButton.Name = "copyOutputButton";
+            this.copyOutputButton.UseVisualStyleBackColor = true;
+            this.copyOutputButton.Click += new System.EventHandler(this.copyOutputButton_Click);
+            // 
+            // outputBGPanel
+            // 
+            this.outputBGPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.outputBGPanel.Controls.Add(this.outputTextBox);
+            resources.ApplyResources(this.outputBGPanel, "outputBGPanel");
+            this.outputBGPanel.Name = "outputBGPanel";
+            // 
+            // outputTextBox
+            // 
+            this.outputTextBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.outputTextBox, "outputTextBox");
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.ReadOnly = true;
+            // 
             // creditsLabel
             // 
             resources.ApplyResources(this.creditsLabel, "creditsLabel");
@@ -127,34 +155,6 @@
             this.creditsPictureBox.Name = "creditsPictureBox";
             this.creditsPictureBox.TabStop = false;
             // 
-            // outputBGPanel
-            // 
-            this.outputBGPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.outputBGPanel.Controls.Add(this.outputTextBox);
-            resources.ApplyResources(this.outputBGPanel, "outputBGPanel");
-            this.outputBGPanel.Name = "outputBGPanel";
-            // 
-            // outputTextBox
-            // 
-            this.outputTextBox.BackColor = System.Drawing.Color.Gainsboro;
-            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.outputTextBox, "outputTextBox");
-            this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.ReadOnly = true;
-            // 
-            // copyOutputButton
-            // 
-            resources.ApplyResources(this.copyOutputButton, "copyOutputButton");
-            this.copyOutputButton.Name = "copyOutputButton";
-            this.copyOutputButton.UseVisualStyleBackColor = true;
-            this.copyOutputButton.Click += new System.EventHandler(this.copyOutputButton_Click);
-            // 
-            // textCopiedLabel
-            // 
-            resources.ApplyResources(this.textCopiedLabel, "textCopiedLabel");
-            this.textCopiedLabel.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.textCopiedLabel.Name = "textCopiedLabel";
-            // 
             // MorseCodeTranslator
             // 
             resources.ApplyResources(this, "$this");
@@ -166,6 +166,7 @@
             this.Controls.Add(this.typeOfInputGroupBox);
             this.Controls.Add(this.enterInputGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MorseCodeTranslator";
             this.enterInputGroupBox.ResumeLayout(false);
             this.enterInputGroupBox.PerformLayout();
@@ -173,9 +174,9 @@
             this.typeOfInputGroupBox.PerformLayout();
             this.outputGroupBox.ResumeLayout(false);
             this.outputGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).EndInit();
             this.outputBGPanel.ResumeLayout(false);
             this.outputBGPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -332,6 +332,9 @@
   <data name="&gt;&gt;textCopiedLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="copyOutputButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="copyOutputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 135</value>
   </data>
@@ -413,6 +416,36 @@
   <data name="&gt;&gt;outputGroupBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="outputTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 8.25pt, style=Italic</value>
+  </data>
+  <data name="outputTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="outputTextBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="outputTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 94</value>
+  </data>
+  <data name="outputTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="outputTextBox.Text" xml:space="preserve">
+    <value>Your output will be displayed here...</value>
+  </data>
+  <data name="&gt;&gt;outputTextBox.Name" xml:space="preserve">
+    <value>outputTextBox</value>
+  </data>
+  <data name="&gt;&gt;outputTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outputTextBox.Parent" xml:space="preserve">
+    <value>outputBGPanel</value>
+  </data>
+  <data name="&gt;&gt;outputTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="creditsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -447,7 +480,7 @@
     <value>Tw Cen MT, 9.75pt, style=Bold, Italic</value>
   </data>
   <data name="creditsLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 311</value>
+    <value>218, 310</value>
   </data>
   <data name="creditsLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 15</value>
@@ -508,36 +541,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;creditsPictureBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="outputTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 8.25pt, style=Italic</value>
-  </data>
-  <data name="outputTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
-  </data>
-  <data name="outputTextBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="outputTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 94</value>
-  </data>
-  <data name="outputTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="outputTextBox.Text" xml:space="preserve">
-    <value>Your output will be displayed here...</value>
-  </data>
-  <data name="&gt;&gt;outputTextBox.Name" xml:space="preserve">
-    <value>outputTextBox</value>
-  </data>
-  <data name="&gt;&gt;outputTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;outputTextBox.Parent" xml:space="preserve">
-    <value>outputBGPanel</value>
-  </data>
-  <data name="&gt;&gt;outputTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

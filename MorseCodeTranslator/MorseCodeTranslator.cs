@@ -7,22 +7,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace MorseCodeTranslator
 {
     public partial class MorseCodeTranslator : Form
     {
+        // List of Letter to Morse Code
+        Dictionary<char, string> morse = new Dictionary<char, string>();
+
         public MorseCodeTranslator()
         {
+            // A - Z
+            morse.Add('A', ".-");
+            morse.Add('B', "-...");
+            morse.Add('C' ,"-.-.");
+            morse.Add('D', "-..");
+            morse.Add('E', ".");
+            morse.Add('F', "..-.");
+            morse.Add('G', "--.");
+            morse.Add('H', "....");
+            morse.Add('I', "..");
+            morse.Add('J', ".---");
+            morse.Add('K', "-.-");
+            morse.Add('L', ".-..");
+            morse.Add('M', "--");
+            morse.Add('N', "-.");
+            morse.Add('O', "---");
+            morse.Add('P', ".--.");
+            morse.Add('Q', "--.-");
+            morse.Add('R', ".-.");
+            morse.Add('S', "...");
+            morse.Add('T', "-");
+            morse.Add('U', "..-");
+            morse.Add('V', "...-");
+            morse.Add('W', ".--");
+            morse.Add('X', "-..-");
+            morse.Add('Y', "-.--");
+            morse.Add('Z', "--..");
+            // 0 - 9
+            morse.Add('0', "-----");
+            morse.Add('1', ".----");
+            morse.Add('2', "..---");
+            morse.Add('3', "...--");
+            morse.Add('4', "....-");
+            morse.Add('5', ".....");
+            morse.Add('6', "-....");
+            morse.Add('7', "--...");
+            morse.Add('8', "---..");
+            morse.Add('9', "----.");
+            // Spaces between words
+            morse.Add(' ', "/");
+
             InitializeComponent();
         }
 
         #region Private Methods
-
-        private void ChangeOutputStyles()
-        {
-            // Cambiar el estilo de la fuente una vez que se traduce en el output
-        }
 
         #endregion
 
@@ -31,14 +71,39 @@ namespace MorseCodeTranslator
         // Translate Button
         private void translateButton_Click(object sender, EventArgs e)
         {
-            string typeInput;
-            if (plainTextRadioButton.Checked)
-                typeInput = "Plain Text: ";
-            else
-                typeInput = "Morse Code: ";
+            bool firstTranslation = false;
 
-            string input = inputTextBox.Text;
-            outputTextBox.Text = typeInput + input;
+            string outputText = "";
+
+
+            // Plain Text Input selected
+            if (plainTextRadioButton.Checked)
+            {
+                foreach (char letter in inputTextBox.Text)
+                    if (morse.ContainsKey(letter))
+                        outputText += morse[letter] + " ";
+
+            }
+            // Morse Code Input selected
+            else
+            {
+
+            }
+
+            outputTextBox.Text = outputText;
+
+
+
+            if (firstTranslation)
+            {
+                // Hide textCopiedLabel
+                textCopiedLabel.Visible = false;
+
+                // Enable copyOutputButton
+                copyOutputButton.Enabled = true;
+            }
+            else
+                firstTranslation = true;
         }
 
         // Credits Link Label
