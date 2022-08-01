@@ -63,6 +63,16 @@ namespace MorseCodeTranslator
             InitializeComponent();
         }
 
+        #region Private methods
+
+        private void ClearInput()
+        {
+            inputTextBox.Text = "";
+        }
+
+        #endregion
+
+
         #region Click Events
         // Translate Button
         private void translateButton_Click(object sender, EventArgs e)
@@ -125,5 +135,15 @@ namespace MorseCodeTranslator
         }
 
         #endregion
+
+        private void plainTextRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+
+        private void morseCodeGroupBox_CheckedChanged(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
     }
 }

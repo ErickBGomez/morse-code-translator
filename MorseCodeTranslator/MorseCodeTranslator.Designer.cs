@@ -86,6 +86,7 @@
             this.morseCodeGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.morseCodeGroupBox.Name = "morseCodeGroupBox";
             this.morseCodeGroupBox.UseVisualStyleBackColor = true;
+            this.morseCodeGroupBox.CheckedChanged += new System.EventHandler(this.morseCodeGroupBox_CheckedChanged);
             // 
             // plainTextRadioButton
             // 
@@ -95,6 +96,7 @@
             this.plainTextRadioButton.Name = "plainTextRadioButton";
             this.plainTextRadioButton.TabStop = true;
             this.plainTextRadioButton.UseVisualStyleBackColor = true;
+            this.plainTextRadioButton.CheckedChanged += new System.EventHandler(this.plainTextRadioButton_CheckedChanged);
             // 
             // outputGroupBox
             // 
