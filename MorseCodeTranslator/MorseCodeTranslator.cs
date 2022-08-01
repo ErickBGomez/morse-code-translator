@@ -18,46 +18,47 @@ namespace MorseCodeTranslator
 
         public MorseCodeTranslator()
         {
+            // Note: Each value has a space at the end to make every combination unique and to prevent errors
             // A - Z
-            morse.Add('A', ".-");
-            morse.Add('B', "-...");
-            morse.Add('C' ,"-.-.");
-            morse.Add('D', "-..");
-            morse.Add('E', ".");
-            morse.Add('F', "..-.");
-            morse.Add('G', "--.");
-            morse.Add('H', "....");
-            morse.Add('I', "..");
-            morse.Add('J', ".---");
-            morse.Add('K', "-.-");
-            morse.Add('L', ".-..");
-            morse.Add('M', "--");
-            morse.Add('N', "-.");
-            morse.Add('O', "---");
-            morse.Add('P', ".--.");
-            morse.Add('Q', "--.-");
-            morse.Add('R', ".-.");
-            morse.Add('S', "...");
-            morse.Add('T', "-");
-            morse.Add('U', "..-");
-            morse.Add('V', "...-");
-            morse.Add('W', ".--");
-            morse.Add('X', "-..-");
-            morse.Add('Y', "-.--");
-            morse.Add('Z', "--..");
+            morse.Add('A', ".- ");
+            morse.Add('B', "-... ");
+            morse.Add('C' ,"-.-. ");
+            morse.Add('D', "-.. ");
+            morse.Add('E', ". ");
+            morse.Add('F', "..-. ");
+            morse.Add('G', "--. ");
+            morse.Add('H', ".... ");
+            morse.Add('I', ".. ");
+            morse.Add('J', ".--- ");
+            morse.Add('K', "-.- ");
+            morse.Add('L', ".-.. ");
+            morse.Add('M', "-- ");
+            morse.Add('N', "-. ");
+            morse.Add('O', "--- ");
+            morse.Add('P', ".--. ");
+            morse.Add('Q', "--.- ");
+            morse.Add('R', ".-. ");
+            morse.Add('S', "... ");
+            morse.Add('T', "- ");
+            morse.Add('U', "..- ");
+            morse.Add('V', "...- ");
+            morse.Add('W', ".-- ");
+            morse.Add('X', "-..- ");
+            morse.Add('Y', "-.-- ");
+            morse.Add('Z', "--.. ");
             // 0 - 9
-            morse.Add('0', "-----");
-            morse.Add('1', ".----");
-            morse.Add('2', "..---");
-            morse.Add('3', "...--");
-            morse.Add('4', "....-");
-            morse.Add('5', ".....");
-            morse.Add('6', "-....");
-            morse.Add('7', "--...");
-            morse.Add('8', "---..");
-            morse.Add('9', "----.");
+            morse.Add('0', "----- ");
+            morse.Add('1', ".---- ");
+            morse.Add('2', "..--- ");
+            morse.Add('3', "...-- ");
+            morse.Add('4', "....- ");
+            morse.Add('5', "..... ");
+            morse.Add('6', "-.... ");
+            morse.Add('7', "--... ");
+            morse.Add('8', "---.. ");
+            morse.Add('9', "----. ");
             // Space between words
-            morse.Add(' ', "/");
+            morse.Add(' ', "/ ");
 
             InitializeComponent();
         }
@@ -67,20 +68,38 @@ namespace MorseCodeTranslator
         private void translateButton_Click(object sender, EventArgs e)
         {
             string outputText = "";
+            string morseInput = "";
 
             // Plain Text Input selected
             if (plainTextRadioButton.Checked)
             {
+                // Reads the input, checks if each letter/number (key) exists in dictionary, and then adds each Morse symbol (value) to the output
                 foreach (char letter in inputTextBox.Text)
                     if (morse.ContainsKey(letter))
-                        outputText += morse[letter] + " ";
+                        outputText += morse[letter];
             }
             // Morse Code Input selected
             else
             {
+                // Add a space at the end of the input to prevent errors with the dictionary
+                inputTextBox.Text += " ";
+                
+                for (int i = 0; i < inputTextBox.Text.Length; i++)
+                {
+                    // Dots (.), dashes (-) and slashes (/) are added to morseInput
+                    morseInput += inputTextBox.Text[i];
 
+                    // If a special combination of dots and dashes is identified in dictionary (value)
+                    if (morse.ContainsValue(morseInput))
+                    {
+                        // Add letter/number (key) to outputText
+                        outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
+                        morseInput = "";
+                    }
+                }
             }
 
+            // Final output is set to the outputTextBox field
             outputTextBox.Text = outputText;
 
 
