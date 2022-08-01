@@ -56,25 +56,17 @@ namespace MorseCodeTranslator
             morse.Add('7', "--...");
             morse.Add('8', "---..");
             morse.Add('9', "----.");
-            // Spaces between words
+            // Space between words
             morse.Add(' ', "/");
 
             InitializeComponent();
         }
 
-        #region Private Methods
-
-        #endregion
-
-
         #region Click Events
         // Translate Button
         private void translateButton_Click(object sender, EventArgs e)
         {
-            bool firstTranslation = false;
-
             string outputText = "";
-
 
             // Plain Text Input selected
             if (plainTextRadioButton.Checked)
@@ -82,7 +74,6 @@ namespace MorseCodeTranslator
                 foreach (char letter in inputTextBox.Text)
                     if (morse.ContainsKey(letter))
                         outputText += morse[letter] + " ";
-
             }
             // Morse Code Input selected
             else
@@ -94,16 +85,11 @@ namespace MorseCodeTranslator
 
 
 
-            if (firstTranslation)
-            {
-                // Hide textCopiedLabel
-                textCopiedLabel.Visible = false;
+            // Hide textCopiedLabel
+            textCopiedLabel.Visible = false;
 
-                // Enable copyOutputButton
-                copyOutputButton.Enabled = true;
-            }
-            else
-                firstTranslation = true;
+            // Enable copyOutputButton
+            copyOutputButton.Enabled = true;
         }
 
         // Credits Link Label
