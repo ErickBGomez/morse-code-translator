@@ -117,5 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label3.Text" xml:space="preserve">
+    <value>In the "Type of Input" section select the "Morse" option to be able to write dots "." and dashes "-" to form letters, a space to separate each letter, slashes "/" to separate compound words. Next, in the "Enter Your Input:" section type what you want to be translated, and then click the "Translate" button. The result you will get will be in Plain Text in the "Output" section.
+
+You can consult the following tab "Morse Code Chart" to see all the combinations that can be made in the translator.
+
+Or you can copy the following example and paste it into the translator so you can see how it works:
+
+
+
+</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>First, in the "Type of Input" section select the "Plain Text" option to be able to write letters from A to Z (UPPERCASE or lowercase), digits from 0 to 9, and also the space to separate each word. Next, in the "Enter Your Input:" section type what you want to be translated, and then click the "Translate" button. The result you will get will be in Morse Code in the "Output" section.</value>
+  </data>
 </root>
