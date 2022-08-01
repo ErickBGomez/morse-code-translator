@@ -152,7 +152,7 @@
             // 
             // creditsPictureBox
             // 
-            this.creditsPictureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.creditsPictureBox.Image = global::MorseCodeTranslator.Properties.Resources.githubLogo;
             resources.ApplyResources(this.creditsPictureBox, "creditsPictureBox");
             this.creditsPictureBox.Name = "creditsPictureBox";
             this.creditsPictureBox.TabStop = false;
@@ -170,6 +170,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MorseCodeTranslator";
+            this.Load += new System.EventHandler(this.MorseCodeTranslator_Load);
             this.enterInputGroupBox.ResumeLayout(false);
             this.enterInputGroupBox.PerformLayout();
             this.typeOfInputGroupBox.ResumeLayout(false);
@@ -193,12 +194,12 @@
         private System.Windows.Forms.GroupBox outputGroupBox;
         private System.Windows.Forms.Label creditsLabel;
         private System.Windows.Forms.LinkLabel creditsLinkLabel;
-        private System.Windows.Forms.PictureBox creditsPictureBox;
         private System.Windows.Forms.Button translateButton;
         private System.Windows.Forms.Panel outputBGPanel;
         private System.Windows.Forms.TextBox outputTextBox;
         private System.Windows.Forms.Label textCopiedLabel;
         private System.Windows.Forms.Button copyOutputButton;
+        private System.Windows.Forms.PictureBox creditsPictureBox;
     }
 }
 

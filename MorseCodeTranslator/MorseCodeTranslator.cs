@@ -65,6 +65,20 @@ namespace MorseCodeTranslator
 
         #region Private methods
 
+        int openConsoleCounter = 0;
+
+        string PlainTextInputCorrection(string writtenInput)
+        {
+            writtenInput = writtenInput.ToUpper();
+
+            return writtenInput;
+        }
+
+        string MorseCodeInputCorrection(string writtenInput)
+        {
+            return writtenInput;
+        }
+
         private void ClearInput()
         {
             inputTextBox.Text = "";
@@ -77,14 +91,17 @@ namespace MorseCodeTranslator
         // Translate Button
         private void translateButton_Click(object sender, EventArgs e)
         {
+            string userInput = "";
             string outputText = "";
             string morseInput = "";
 
             // Plain Text Input selected
             if (plainTextRadioButton.Checked)
             {
+                userInput = PlainTextInputCorrection(inputTextBox.Text);
+
                 // Reads the input, checks if each letter/number (key) exists in dictionary, and then adds each Morse symbol (value) to the output
-                foreach (char letter in inputTextBox.Text)
+                foreach (char letter in userInput)
                     if (morse.ContainsKey(letter))
                         outputText += morse[letter];
             }
@@ -92,7 +109,7 @@ namespace MorseCodeTranslator
             else
             {
                 // Add a space at the end of the input to prevent errors with the dictionary
-                inputTextBox.Text += " ";
+                userInput = inputTextBox.Text + " ";
                 
                 for (int i = 0; i < inputTextBox.Text.Length; i++)
                 {
@@ -127,6 +144,7 @@ namespace MorseCodeTranslator
             System.Diagnostics.Process.Start("https://github.com/ErickBGomez");
         }
 
+        // Copy text button
         private void copyOutputButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Clipboard.SetText(outputTextBox.Text);
@@ -134,8 +152,7 @@ namespace MorseCodeTranslator
             textCopiedLabel.Visible = true;
         }
 
-        #endregion
-
+        // Clear Input TextBox each time the user selects an different Type of Input
         private void plainTextRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             ClearInput();
@@ -144,6 +161,13 @@ namespace MorseCodeTranslator
         private void morseCodeGroupBox_CheckedChanged(object sender, EventArgs e)
         {
             ClearInput();
+        }
+
+        #endregion
+
+        private void MorseCodeTranslator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
