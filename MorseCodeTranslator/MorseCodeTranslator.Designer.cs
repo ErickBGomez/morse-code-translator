@@ -42,13 +42,11 @@
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.creditsLabel = new System.Windows.Forms.Label();
             this.creditsLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.creditsPictureBox = new System.Windows.Forms.PictureBox();
             this.helpButton = new System.Windows.Forms.Button();
             this.enterInputGroupBox.SuspendLayout();
             this.typeOfInputGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
             this.outputBGPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // inputTextBox
@@ -151,13 +149,6 @@
             this.creditsLinkLabel.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.creditsLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.creditsLinkLabel_LinkClicked);
             // 
-            // creditsPictureBox
-            // 
-            this.creditsPictureBox.Image = global::MorseCodeTranslator.Properties.Resources.githubLogo;
-            resources.ApplyResources(this.creditsPictureBox, "creditsPictureBox");
-            this.creditsPictureBox.Name = "creditsPictureBox";
-            this.creditsPictureBox.TabStop = false;
-            // 
             // helpButton
             // 
             resources.ApplyResources(this.helpButton, "helpButton");
@@ -169,7 +160,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.helpButton);
-            this.Controls.Add(this.creditsPictureBox);
             this.Controls.Add(this.creditsLinkLabel);
             this.Controls.Add(this.creditsLabel);
             this.Controls.Add(this.outputGroupBox);
@@ -187,7 +177,6 @@
             this.outputGroupBox.PerformLayout();
             this.outputBGPanel.ResumeLayout(false);
             this.outputBGPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.creditsPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +196,6 @@
         private System.Windows.Forms.TextBox outputTextBox;
         private System.Windows.Forms.Label textCopiedLabel;
         private System.Windows.Forms.Button copyOutputButton;
-        private System.Windows.Forms.PictureBox creditsPictureBox;
         private System.Windows.Forms.Button helpButton;
     }
 }
