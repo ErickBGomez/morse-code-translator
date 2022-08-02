@@ -61,11 +61,12 @@ namespace MorseCodeTranslator
             morse.Add(' ', "/ ");
 
             InitializeComponent();
+
+            translateButton.Enabled = false;
+            copyOutputButton.Enabled = false;
         }
 
         #region Private methods
-
-        int openConsoleCounter = 0;
 
         string PlainTextInputCorrection(string writtenInput)
         {
@@ -88,52 +89,55 @@ namespace MorseCodeTranslator
             string outputText = "";
             string morseInput = "";
 
-            // Don't translate when input is empty
-            if (inputTextBox.Text != "")
+            // Plain Text Input selected
+            if (plainTextRadioButton.Checked)
             {
-                // Plain Text Input selected
-                if (plainTextRadioButton.Checked)
-                {
-                    userInput = PlainTextInputCorrection(inputTextBox.Text);
+                userInput = PlainTextInputCorrection(inputTextBox.Text);
 
-                    // Reads the input, checks if each letter/number (key) exists in dictionary, and then adds each Morse symbol (value) to the output
-                    foreach (char letter in userInput)
-                        if (morse.ContainsKey(letter))
-                            outputText += morse[letter];
-                }
-                // Morse Code Input selected
-                else
-                {
-                    // Add a space at the end of the input to prevent errors with the dictionary
-                    userInput = inputTextBox.Text + " ";
+                // Reads the input, checks if each letter/number (key) exists in dictionary, and then adds each Morse symbol (value) to the output
+                foreach (char letter in userInput)
+                    if (morse.ContainsKey(letter))
+                        outputText += morse[letter];
+            }
+            // Morse Code Input selected
+            else
+            {
+                // Add a space at the end of the input to prevent errors with the dictionary
+                userInput = inputTextBox.Text + " ";
 
-                    for (int i = 0; i < userInput.Length; i++)
+                for (int i = 0; i < userInput.Length; i++)
+                {
+                    // Dots (.), dashes (-) and slashes (/) are added to morseInput
+                    morseInput += userInput[i];
+
+                    // If a special combination of dots and dashes is identified in dictionary (value)
+                    if (morse.ContainsValue(morseInput))
                     {
-                        // Dots (.), dashes (-) and slashes (/) are added to morseInput
-                        morseInput += userInput[i];
-
-                        // If a special combination of dots and dashes is identified in dictionary (value)
-                        if (morse.ContainsValue(morseInput))
-                        {
-                            // Add letter/number (key) to outputText
-                            outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
-                            morseInput = "";
-                        }
+                        // Add letter/number (key) to outputText
+                        outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
+                        morseInput = "";
                     }
                 }
-
-                // Final output is set to the outputTextBox field
-                outputTextBox.Text = outputText;
-
-
-
-
-                // Hide textCopiedLabel
-                textCopiedLabel.Visible = false;
-
-                // Enable copyOutputButton
-                copyOutputButton.Enabled = true;
             }
+
+            // Final output is set to the outputTextBox field
+            outputTextBox.Text = outputText;
+
+
+
+
+            // Hide textCopiedLabel
+            textCopiedLabel.Visible = false;
+
+            // Enable copyOutputButton
+            copyOutputButton.Enabled = true;
+        }
+
+        // Don't translate when input is empty
+        private void inputTextBox_TextChanged(object sender, EventArgs e)
+        {
+            bool enableButton = (inputTextBox.Text != "") ? true : false;
+            translateButton.Enabled = enableButton;
         }
 
         // Credits Link Label

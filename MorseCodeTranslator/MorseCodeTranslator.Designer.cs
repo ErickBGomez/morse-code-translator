@@ -53,6 +53,7 @@
             // 
             resources.ApplyResources(this.inputTextBox, "inputTextBox");
             this.inputTextBox.Name = "inputTextBox";
+            this.inputTextBox.TextChanged += new System.EventHandler(this.inputTextBox_TextChanged);
             // 
             // enterInputGroupBox
             // 
