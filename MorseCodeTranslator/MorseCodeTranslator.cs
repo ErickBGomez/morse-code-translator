@@ -18,11 +18,32 @@ namespace MorseCodeTranslator
 
         public MorseCodeTranslator()
         {
+            InitializeComponent();
+        }
+
+        #region Private methods
+
+        string PlainTextInputCorrection(string writtenInput)
+        {
+            return writtenInput.ToUpper();
+        }
+
+        private void ClearInput()
+        {
+            inputTextBox.Text = "";
+        }
+
+        #endregion
+
+        #region Load Form
+
+        private void MorseCodeTranslator_Load(object sender, EventArgs e)
+        {
             // Note: Each value has a space at the end to make every combination unique and to prevent errors
             // A - Z
             morse.Add('A', ".- ");
             morse.Add('B', "-... ");
-            morse.Add('C' ,"-.-. ");
+            morse.Add('C', "-.-. ");
             morse.Add('D', "-.. ");
             morse.Add('E', ". ");
             morse.Add('F', "..-. ");
@@ -60,28 +81,15 @@ namespace MorseCodeTranslator
             // Space between words
             morse.Add(' ', "/ ");
 
-            InitializeComponent();
-
+            // Set Enable false to translate button and copy button
             translateButton.Enabled = false;
             copyOutputButton.Enabled = false;
-        }
-
-        #region Private methods
-
-        string PlainTextInputCorrection(string writtenInput)
-        {
-            return writtenInput.ToUpper();
-        }
-
-        private void ClearInput()
-        {
-            inputTextBox.Text = "";
         }
 
         #endregion
 
 
-        #region Click Events
+        #region Clicks and text changes events
         // Translate Button
         private void translateButton_Click(object sender, EventArgs e)
         {
@@ -165,11 +173,11 @@ namespace MorseCodeTranslator
             ClearInput();
         }
 
-        #endregion
-
-        private void MorseCodeTranslator_Load(object sender, EventArgs e)
+        private void helpButton_Click(object sender, EventArgs e)
         {
 
         }
+
+        #endregion
     }
 }
