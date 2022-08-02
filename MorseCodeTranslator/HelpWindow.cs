@@ -21,5 +21,10 @@ namespace MorseCodeTranslator
         {
             PublicMethods.CopyToClipboard(exampleMorseTextBox, textCopiedLabel);
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
