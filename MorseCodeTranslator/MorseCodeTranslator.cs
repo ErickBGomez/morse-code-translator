@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace MorseCodeTranslator
 {
@@ -151,13 +151,13 @@ namespace MorseCodeTranslator
         // Credits Link Label
         private void creditsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/ErickBGomez");
+            Process.Start("https://github.com/ErickBGomez");
         }
 
         // Copy text button
         private void copyOutputButton_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Clipboard.SetText(outputTextBox.Text);
+            Clipboard.SetText(outputTextBox.Text);
 
             textCopiedLabel.Visible = true;
         }
@@ -173,9 +173,11 @@ namespace MorseCodeTranslator
             ClearInput();
         }
 
+        // Show HelpWindow form
         private void helpButton_Click(object sender, EventArgs e)
         {
-
+            HelpWindow help = new HelpWindow();
+            help.Show();
         }
 
         #endregion

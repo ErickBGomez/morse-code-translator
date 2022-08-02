@@ -45,10 +45,10 @@
             // 
             this.helpTabControl.Controls.Add(this.tabPage2);
             this.helpTabControl.Controls.Add(this.morseCodeChartTab);
-            this.helpTabControl.Location = new System.Drawing.Point(13, 13);
+            this.helpTabControl.Location = new System.Drawing.Point(2, 2);
             this.helpTabControl.Name = "helpTabControl";
             this.helpTabControl.SelectedIndex = 0;
-            this.helpTabControl.Size = new System.Drawing.Size(494, 425);
+            this.helpTabControl.Size = new System.Drawing.Size(515, 445);
             this.helpTabControl.TabIndex = 0;
             // 
             // tabPage2
@@ -61,17 +61,17 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(486, 399);
+            this.tabPage2.Size = new System.Drawing.Size(507, 419);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "How to use";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // exampleMorseTextBox
             // 
-            this.exampleMorseTextBox.Location = new System.Drawing.Point(125, 292);
+            this.exampleMorseTextBox.Location = new System.Drawing.Point(72, 304);
             this.exampleMorseTextBox.Name = "exampleMorseTextBox";
             this.exampleMorseTextBox.ReadOnly = true;
-            this.exampleMorseTextBox.Size = new System.Drawing.Size(100, 20);
+            this.exampleMorseTextBox.Size = new System.Drawing.Size(196, 20);
             this.exampleMorseTextBox.TabIndex = 5;
             // 
             // label3
