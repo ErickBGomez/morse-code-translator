@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicMethods.cs" />
     <EmbeddedResource Include="HelpWindow.resx">
       <DependentUpon>HelpWindow.cs</DependentUpon>
     </EmbeddedResource>

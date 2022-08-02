@@ -16,5 +16,10 @@ namespace MorseCodeTranslator
         {
             InitializeComponent();
         }
+
+        private void copyOutputButton_Click(object sender, EventArgs e)
+        {
+            PublicMethods.CopyToClipboard(exampleMorseTextBox, textCopiedLabel);
+        }
     }
 }

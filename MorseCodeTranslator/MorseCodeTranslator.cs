@@ -157,9 +157,7 @@ namespace MorseCodeTranslator
         // Copy text button
         private void copyOutputButton_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(outputTextBox.Text);
-
-            textCopiedLabel.Visible = true;
+            PublicMethods.CopyToClipboard(outputTextBox, textCopiedLabel);
         }
 
         // Clear Input TextBox each time the user selects an different Type of Input
