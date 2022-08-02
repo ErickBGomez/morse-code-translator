@@ -16,6 +16,9 @@ namespace MorseCodeTranslator
         // List of Letter to Morse Code
         Dictionary<char, string> morse = new Dictionary<char, string>();
 
+        // Dictionary of possible errors
+        Dictionary<int, string> error = new Dictionary<int, string>();
+
         public MorseCodeTranslator()
         {
             InitializeComponent();
@@ -81,6 +84,10 @@ namespace MorseCodeTranslator
             // Space between words
             morse.Add(' ', "/ ");
 
+            // Assign errors to dictionary
+            error.Add(1, "#ERROR01: Plain Text Input contains an invalid character (Use only letters and numbers)");
+            error.Add(2, "#ERROR02: Morse Code Input contains an invalid character (Use only '.', '-' and '/')");
+
             // Set Enable false to translate button and copy button
             translateButton.Enabled = false;
             copyOutputButton.Enabled = false;
@@ -106,6 +113,11 @@ namespace MorseCodeTranslator
                 foreach (char letter in userInput)
                     if (morse.ContainsKey(letter))
                         outputText += morse[letter];
+                    else
+                    {
+                        outputText = error[1];
+                        break;
+                    }
             }
             // Morse Code Input selected
             else
@@ -131,14 +143,11 @@ namespace MorseCodeTranslator
             // Final output is set to the outputTextBox field
             outputTextBox.Text = outputText;
 
-
-
-
-            // Hide textCopiedLabel
             textCopiedLabel.Visible = false;
 
-            // Enable copyOutputButton
-            copyOutputButton.Enabled = true;
+            // Enable copyOutputButton if there are no errors
+            bool enableCopyOutputButton = (outputText[0] != '#') ? true : false;
+            copyOutputButton.Enabled = enableCopyOutputButton;
         }
 
         // Don't translate when input is empty
