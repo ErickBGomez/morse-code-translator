@@ -88,6 +88,7 @@ namespace MorseCodeTranslator
             string outputText = "";
             string morseInput = "";
 
+            // Don't translate when input is empty
             if (inputTextBox.Text != "")
             {
                 // Plain Text Input selected

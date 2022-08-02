@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpWindow));
             this.helpTabControl = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.exampleMorseTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.howToUseLabel = new System.Windows.Forms.Label();
             this.morseCodeChartTab = new System.Windows.Forms.TabPage();
-            this.exampleMorseTextBox = new System.Windows.Forms.TextBox();
             this.helpTabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,14 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "How to use";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // exampleMorseTextBox
+            // 
+            this.exampleMorseTextBox.Location = new System.Drawing.Point(125, 292);
+            this.exampleMorseTextBox.Name = "exampleMorseTextBox";
+            this.exampleMorseTextBox.ReadOnly = true;
+            this.exampleMorseTextBox.Size = new System.Drawing.Size(100, 20);
+            this.exampleMorseTextBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -111,14 +119,6 @@
             this.morseCodeChartTab.TabIndex = 2;
             this.morseCodeChartTab.Text = "Morse Code Chart";
             this.morseCodeChartTab.UseVisualStyleBackColor = true;
-            // 
-            // exampleMorseTextBox
-            // 
-            this.exampleMorseTextBox.Location = new System.Drawing.Point(110, 292);
-            this.exampleMorseTextBox.Name = "exampleMorseTextBox";
-            this.exampleMorseTextBox.ReadOnly = true;
-            this.exampleMorseTextBox.Size = new System.Drawing.Size(100, 20);
-            this.exampleMorseTextBox.TabIndex = 5;
             // 
             // HelpWindow
             // 
