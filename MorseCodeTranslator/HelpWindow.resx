@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label3.Text" xml:space="preserve">
-    <value>In the "Type of Input" section select the "Morse" option to be able to write dots "." and dashes "-" to form letters, a space to separate each letter, slashes "/" to separate compound words. Next, in the "Enter Your Input:" section type what you want to be translated, and then click the "Translate" button. The result you will get will be in Plain Text in the "Output" section.
+    <value>In the "Type of Input" section select the "Morse" option to be able to write dots "." and dashes "-" to create letters, a space to separate each letter, slashes "/" to separate words. Next, in the "Enter Your Input:" section type what you want to be translated, and then click the "Translate" button. The result you will get will be in Plain Text in the "Output" section.
 
 You can consult the following tab "Morse Code Chart" to see all the combinations that can be made in the translator.
 
-Or you can copy the following example and paste it into the translator so you can see how it works:
+Or you can copy the following example and paste it into the translator to see how this app works:
 
 
 

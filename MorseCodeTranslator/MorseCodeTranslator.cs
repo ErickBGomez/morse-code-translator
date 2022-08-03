@@ -87,6 +87,7 @@ namespace MorseCodeTranslator
             // Assign errors to dictionary
             error.Add(1, "#ERROR01: Plain Text Input contains an invalid character (Use only letters and numbers)");
             error.Add(2, "#ERROR02: Morse Code Input contains an invalid character (Use only '.', '-' and '/')");
+            error.Add(3, "#ERROR03: Morse Code Input contains an unregistered combination (See Morse Code Chart in the Help Window [?] for allowed symbol combinations)");
 
             // Set Enable false to translate button and copy button
             translateButton.Enabled = false;
@@ -115,6 +116,7 @@ namespace MorseCodeTranslator
                         outputText += morse[letter];
                     else
                     {
+                        // If the input contains a character different of letters, numbers and spaces, print #ERROR01
                         outputText = error[1];
                         break;
                     }
@@ -125,17 +127,24 @@ namespace MorseCodeTranslator
                 // Add a space at the end of the input to prevent errors with the dictionary
                 userInput = inputTextBox.Text + " ";
 
-                for (int i = 0; i < userInput.Length; i++)
+                foreach (char character in userInput)
                 {
                     // Dots (.), dashes (-) and slashes (/) are added to morseInput
-                    morseInput += userInput[i];
+                    morseInput += character;
 
-                    // If a special combination of dots and dashes is identified in dictionary (value)
-                    if (morse.ContainsValue(morseInput))
+                    // Evaluate the combinations of symbols only when the character is a space between combinations
+                    if (character == ' ')
                     {
-                        // Add letter/number (key) to outputText
-                        outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
-                        morseInput = "";
+                        // If a special combination of dots and dashes is identified in dictionary (value)
+                        if (morse.ContainsValue(morseInput))
+                        {
+                            // Add letter/number (key) to outputText
+                            outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
+                            morseInput = "";
+                        }
+                        else
+                            // If morseInput contains an unregistered combination of symbol, print #ERROR03
+                            outputText = error[3];
                     }
                 }
             }
