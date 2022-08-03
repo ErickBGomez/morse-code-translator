@@ -120,12 +120,15 @@ namespace MorseCodeTranslator
                         outputText = error[1];
                         break;
                     }
+
+                // Delete the last space of the string
+                outputText = outputText.Trim();
             }
             // Morse Code Input selected
             else
             {
                 // Add a space at the end of the input to prevent errors with the dictionary
-                userInput = inputTextBox.Text + " ";
+                userInput = inputTextBox.Text.Trim() + " ";
 
                 foreach (char character in userInput)
                 {
