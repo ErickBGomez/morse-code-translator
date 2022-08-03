@@ -17,7 +17,7 @@ namespace MorseCodeTranslator
         Dictionary<char, string> morse = new Dictionary<char, string>();
 
         // Dictionary of possible errors
-        Dictionary<int, string> error = new Dictionary<int, string>();
+        List<string> error = new List<string>();
 
         // List of allowed symbols
         List<char> registeredSymbols = new List<char>();
@@ -94,9 +94,9 @@ namespace MorseCodeTranslator
             morse.Add(' ', "/ ");
 
             // Assign errors to dictionary
-            error.Add(1, "#ERROR01: Plain Text Input contains an invalid character (Use only letters and numbers)");
-            error.Add(2, "#ERROR02: Morse Code Input contains an invalid character (Use only '.', '-' and '/')");
-            error.Add(3, "#ERROR03: Morse Code Input contains an unregistered combination (See Morse Code Chart in the Help Window [?] for allowed symbol combinations)");
+            error.Add("#ERROR01: Plain Text Input contains an invalid character (Use only letters and numbers)");
+            error.Add("#ERROR02: Morse Code Input contains an invalid character (Use only '.', '-' and '/')");
+            error.Add("#ERROR03: Morse Code Input contains an unregistered combination (See Morse Code Chart in the Help Window [?] for allowed symbol combinations)");
 
             // Set Enable false to translate button and copy button
             translateButton.Enabled = false;
@@ -126,7 +126,7 @@ namespace MorseCodeTranslator
                     else
                     {
                         // If the input contains a character different of letters, numbers and spaces, print #ERROR01
-                        outputText = error[1];
+                        outputText = error[0];
                         break;
                     }
 
@@ -161,7 +161,7 @@ namespace MorseCodeTranslator
                             else
                             {
                                 // If morseInput contains an unregistered combination of symbol, print #ERROR03
-                                outputText = error[3];
+                                outputText = error[2];
                                 break;
                             }
 
@@ -170,7 +170,7 @@ namespace MorseCodeTranslator
                     else
                     {
                         // If the input contains a symbol different of the registered list, print #ERROR02
-                        outputText = error[2];
+                        outputText = error[1];
                         break;
                     }
                 }
