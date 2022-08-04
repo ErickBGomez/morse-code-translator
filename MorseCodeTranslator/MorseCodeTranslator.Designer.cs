@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MorseCodeTranslator));
             this.inputTextBox = new System.Windows.Forms.TextBox();
             this.enterInputGroupBox = new System.Windows.Forms.GroupBox();
@@ -43,10 +44,12 @@
             this.creditsLabel = new System.Windows.Forms.Label();
             this.creditsLinkLabel = new System.Windows.Forms.LinkLabel();
             this.helpButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.enterInputGroupBox.SuspendLayout();
             this.typeOfInputGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
             this.outputBGPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // inputTextBox
@@ -54,6 +57,7 @@
             resources.ApplyResources(this.inputTextBox, "inputTextBox");
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.TextChanged += new System.EventHandler(this.inputTextBox_TextChanged);
+            this.inputTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTextBox_KeyDown);
             // 
             // enterInputGroupBox
             // 
@@ -157,6 +161,10 @@
             this.helpButton.UseVisualStyleBackColor = true;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // MorseCodeTranslator
             // 
             resources.ApplyResources(this, "$this");
@@ -179,6 +187,7 @@
             this.outputGroupBox.PerformLayout();
             this.outputBGPanel.ResumeLayout(false);
             this.outputBGPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +208,7 @@
         private System.Windows.Forms.Label textCopiedLabel;
         private System.Windows.Forms.Button copyOutputButton;
         private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

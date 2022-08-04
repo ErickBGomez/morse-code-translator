@@ -13,14 +13,14 @@ namespace MorseCodeTranslator
 {
     public partial class MorseCodeTranslator : Form
     {
+        // List of allowed symbols
+        List<char> registeredSymbols = new List<char>();
+
         // List of Letter to Morse Code
         Dictionary<char, string> morse = new Dictionary<char, string>();
 
         // Dictionary of possible errors
         List<string> error = new List<string>();
-
-        // List of allowed symbols
-        List<char> registeredSymbols = new List<char>();
 
         public MorseCodeTranslator()
         {
@@ -29,9 +29,88 @@ namespace MorseCodeTranslator
 
         #region Private methods
 
-        string PlainTextInputCorrection(string writtenInput)
+        private string PlainTextInputCorrection(string writtenInput)
         {
             return writtenInput.ToUpper();
+        }
+
+        // Translate method
+        private void Translate()
+        {
+            string userInput = "";
+            string outputText = "";
+            string morseInput = "";
+
+            // Plain Text Input selected
+            if (plainTextRadioButton.Checked)
+            {
+                userInput = PlainTextInputCorrection(inputTextBox.Text);
+
+                // Reads the input, checks if each letter/number (key) exists in dictionary, and then adds each Morse symbol (value) to the output
+                foreach (char letter in userInput)
+                    if (morse.ContainsKey(letter))
+                        outputText += morse[letter];
+                    else
+                    {
+                        // If the input contains a character different of letters, numbers and spaces, show #ERROR01
+                        MessageBox.Show(error[1], error[0], MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                // Delete the last space of the string
+                outputText = outputText.Trim();
+            }
+            // Morse Code Input selected
+            else
+            {
+                // Add a space at the end of the input to prevent errors with the dictionary
+                userInput = inputTextBox.Text.Trim() + " ";
+
+                foreach (char character in userInput)
+                {
+                    // Verify if the input contains Dots (.), dashes (-) slashes (/) or spaces ( )
+                    if (registeredSymbols.Contains(character))
+                    {
+                        // Characters are added to morseInput
+                        morseInput += character;
+
+                        // Evaluate the combinations of symbols only when the character is a space between combinations
+                        if (character == ' ')
+                        {
+                            // If a special combination of dots and dashes is identified in dictionary (value)
+                            if (morse.ContainsValue(morseInput))
+                            {
+                                // Add letter/number (key) to outputText
+                                outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
+                                // Reset morseInput each time the combination is stored to outputText
+                                morseInput = "";
+                            }
+                            else
+                            {
+                                // If morseInput contains an unregistered combination of symbol, print #ERROR03
+                                MessageBox.Show(error[3], error[0], MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        // If the input contains a symbol different of the registered list, print #ERROR02
+                        MessageBox.Show(error[2], error[0], MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                        return;
+                    }
+                }
+            }
+
+            // Final output is set to the outputTextBox field
+            outputTextBox.Text = outputText;
+
+            textCopiedLabel.Visible = false;
+
+            // Enable copyOutputButton if there are no errors
+            bool enableCopyOutputButton = (outputText[0] != '#') ? true : false;
+            copyOutputButton.Enabled = enableCopyOutputButton;
         }
 
         private void ClearInput()
@@ -45,6 +124,7 @@ namespace MorseCodeTranslator
 
         private void MorseCodeTranslator_Load(object sender, EventArgs e)
         {
+
             // Allowed symbols for Morse Code
             registeredSymbols.Add('.');
             registeredSymbols.Add('-');
@@ -94,6 +174,7 @@ namespace MorseCodeTranslator
             morse.Add(' ', "/ ");
 
             // Assign errors to dictionary
+            error.Add("Error detected"); // Title
             error.Add("#ERROR01: Plain Text Input contains an invalid character (Use only letters and numbers)");
             error.Add("#ERROR02: Morse Code Input contains an invalid character (Use only '.', '-' and '/')");
             error.Add("#ERROR03: Morse Code Input contains an unregistered combination (See Morse Code Chart in the Help Window [?] for allowed symbol combinations)");
@@ -107,83 +188,18 @@ namespace MorseCodeTranslator
 
 
         #region Clicks and text changes events
-        // Translate Button
+        // Translate when user clicks the translateButton
         private void translateButton_Click(object sender, EventArgs e)
         {
-            string userInput = "";
-            string outputText = "";
-            string morseInput = "";
+            Translate();
+        }
 
-            // Plain Text Input selected
-            if (plainTextRadioButton.Checked)
-            {
-                userInput = PlainTextInputCorrection(inputTextBox.Text);
-
-                // Reads the input, checks if each letter/number (key) exists in dictionary, and then adds each Morse symbol (value) to the output
-                foreach (char letter in userInput)
-                    if (morse.ContainsKey(letter))
-                        outputText += morse[letter];
-                    else
-                    {
-                        // If the input contains a character different of letters, numbers and spaces, print #ERROR01
-                        outputText = error[0];
-                        break;
-                    }
-
-                // Delete the last space of the string
-                outputText = outputText.Trim();
-            }
-            // Morse Code Input selected
-            else
-            {
-                // Add a space at the end of the input to prevent errors with the dictionary
-                userInput = inputTextBox.Text.Trim() + " ";
-
-                foreach (char character in userInput)
-                {
-                    // Verify if the input contains Dots (.), dashes (-) slashes (/) or spaces ( )
-                    if (registeredSymbols.Contains(character))
-                    { 
-                        // Characters are added to morseInput
-                        morseInput += character;
-
-                        // Evaluate the combinations of symbols only when the character is a space between combinations
-                        if (character == ' ')
-                        {
-                            // If a special combination of dots and dashes is identified in dictionary (value)
-                            if (morse.ContainsValue(morseInput))
-                            {
-                                // Add letter/number (key) to outputText
-                                outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
-                                // Reset morseInput each time the combination is stored to outputText
-                                morseInput = "";
-                            }
-                            else
-                            {
-                                // If morseInput contains an unregistered combination of symbol, print #ERROR03
-                                outputText = error[2];
-                                break;
-                            }
-
-                        }
-                    }
-                    else
-                    {
-                        // If the input contains a symbol different of the registered list, print #ERROR02
-                        outputText = error[1];
-                        break;
-                    }
-                }
-            }
-
-            // Final output is set to the outputTextBox field
-            outputTextBox.Text = outputText;
-
-            textCopiedLabel.Visible = false;
-
-            // Enable copyOutputButton if there are no errors
-            bool enableCopyOutputButton = (outputText[0] != '#') ? true : false;
-            copyOutputButton.Enabled = enableCopyOutputButton;
+        // Translate when user presses "Enter" key
+        private void inputTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (inputTextBox.Text != "")
+                if (e.KeyCode == Keys.Enter)
+                    Translate();
         }
 
         // Don't translate when input is empty
