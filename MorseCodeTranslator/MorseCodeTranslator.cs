@@ -107,10 +107,7 @@ namespace MorseCodeTranslator
             outputTextBox.Text = outputText;
 
             textCopiedLabel.Visible = false;
-
-            // Enable copyOutputButton if there are no errors
-            bool enableCopyOutputButton = (outputText[0] != '#') ? true : false;
-            copyOutputButton.Enabled = enableCopyOutputButton;
+            copyOutputButton.Enabled = true;
         }
 
         private void ClearInput()
@@ -197,9 +194,8 @@ namespace MorseCodeTranslator
         // Translate when user presses "Enter" key
         private void inputTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (inputTextBox.Text != "")
-                if (e.KeyCode == Keys.Enter)
-                    Translate();
+            if (e.KeyCode == Keys.Enter && inputTextBox.Text != "")
+                Translate();
         }
 
         // Don't translate when input is empty
