@@ -1,0 +1,4 @@
+﻿Error detected
+#ERROR01: Plain Text Input contains an invalid character (Use only letters and numbers)
+#ERROR02: Morse Code Input contains an invalid character (Use only '.', '-' and '/')
+#ERROR03: Morse Code Input contains an unregistered combination (See Morse Code Chart in the Help Window [?] for allowed symbol combinations)

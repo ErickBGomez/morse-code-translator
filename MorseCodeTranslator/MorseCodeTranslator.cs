@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 namespace MorseCodeTranslator
 {
@@ -16,11 +17,11 @@ namespace MorseCodeTranslator
         // List of allowed symbols
         List<char> registeredSymbols = new List<char>();
 
-        // List of Letter to Morse Code
-        Dictionary<char, string> morse = new Dictionary<char, string>();
+        // Dictionary of Letter and combination of symbols of Morse Code
+        Dictionary<char, string> morseCode = new Dictionary<char, string>();
 
         // Dictionary of possible errors
-        List<string> error = new List<string>();
+        List<string> errors = new List<string>();
 
         public MorseCodeTranslator()
         {
@@ -48,12 +49,12 @@ namespace MorseCodeTranslator
 
                 // Reads the input, checks if each letter/number (key) exists in dictionary, and then adds each Morse symbol (value) to the output
                 foreach (char letter in userInput)
-                    if (morse.ContainsKey(letter))
-                        outputText += morse[letter];
+                    if (morseCode.ContainsKey(letter))
+                        outputText += morseCode[letter];
                     else
                     {
                         // If the input contains a character different of letters, numbers and spaces, show #ERROR01
-                        MessageBox.Show(error[1], error[0], MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(errors[1], errors[0], MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -78,17 +79,17 @@ namespace MorseCodeTranslator
                         if (character == ' ')
                         {
                             // If a special combination of dots and dashes is identified in dictionary (value)
-                            if (morse.ContainsValue(morseInput))
+                            if (morseCode.ContainsValue(morseInput))
                             {
                                 // Add letter/number (key) to outputText
-                                outputText += morse.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
+                                outputText += morseCode.FirstOrDefault(symbol => symbol.Value == morseInput).Key;
                                 // Reset morseInput each time the combination is stored to outputText
                                 morseInput = "";
                             }
                             else
                             {
                                 // If morseInput contains an unregistered combination of symbol, print #ERROR03
-                                MessageBox.Show(error[3], error[0], MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(errors[3], errors[0], MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
                             }
 
@@ -97,7 +98,7 @@ namespace MorseCodeTranslator
                     else
                     {
                         // If the input contains a symbol different of the registered list, print #ERROR02
-                        MessageBox.Show(error[2], error[0], MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                        MessageBox.Show(errors[2], errors[0], MessageBoxButtons.OK, MessageBoxIcon.Error); ;
                         return;
                     }
                 }
@@ -121,60 +122,40 @@ namespace MorseCodeTranslator
 
         private void MorseCodeTranslator_Load(object sender, EventArgs e)
         {
+            // Project path
+            string projectPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+            // Files paths
+            string registeredSymbolsPath = projectPath + @"\registeredSymbols.txt";
+            string morseCodePath = projectPath + @"\morseCode.txt";
+            string errorsPath = projectPath + @"\errors.txt";
+
+            // Array to Read File input Lines
+            string[] readLines;
+
 
             // Allowed symbols for Morse Code
-            registeredSymbols.Add('.');
-            registeredSymbols.Add('-');
-            registeredSymbols.Add('/');
-            registeredSymbols.Add(' ');
+            readLines = File.ReadAllLines(registeredSymbolsPath);
+            
+            foreach(string line in readLines)
+                registeredSymbols.Add(line.ToCharArray()[0]);
 
+
+            // Morse Code Dictionary
             // Note: Each value has a space at the end to make every combination unique and to prevent errors
-            // A - Z
-            morse.Add('A', ".- ");
-            morse.Add('B', "-... ");
-            morse.Add('C', "-.-. ");
-            morse.Add('D', "-.. ");
-            morse.Add('E', ". ");
-            morse.Add('F', "..-. ");
-            morse.Add('G', "--. ");
-            morse.Add('H', ".... ");
-            morse.Add('I', ".. ");
-            morse.Add('J', ".--- ");
-            morse.Add('K', "-.- ");
-            morse.Add('L', ".-.. ");
-            morse.Add('M', "-- ");
-            morse.Add('N', "-. ");
-            morse.Add('O', "--- ");
-            morse.Add('P', ".--. ");
-            morse.Add('Q', "--.- ");
-            morse.Add('R', ".-. ");
-            morse.Add('S', "... ");
-            morse.Add('T', "- ");
-            morse.Add('U', "..- ");
-            morse.Add('V', "...- ");
-            morse.Add('W', ".-- ");
-            morse.Add('X', "-..- ");
-            morse.Add('Y', "-.-- ");
-            morse.Add('Z', "--.. ");
-            // 0 - 9
-            morse.Add('0', "----- ");
-            morse.Add('1', ".---- ");
-            morse.Add('2', "..--- ");
-            morse.Add('3', "...-- ");
-            morse.Add('4', "....- ");
-            morse.Add('5', "..... ");
-            morse.Add('6', "-.... ");
-            morse.Add('7', "--... ");
-            morse.Add('8', "---.. ");
-            morse.Add('9', "----. ");
-            // Space between words
-            morse.Add(' ', "/ ");
+            readLines = File.ReadAllLines(morseCodePath);
+
+            foreach (string line in readLines)
+            {
+                string[] splitLines = line.Split(',');
+                morseCode.Add(splitLines[0].ToCharArray()[0], splitLines[1]);
+            }
 
             // Assign errors to dictionary
-            error.Add("Error detected"); // Title
-            error.Add("#ERROR01: Plain Text Input contains an invalid character (Use only letters and numbers)");
-            error.Add("#ERROR02: Morse Code Input contains an invalid character (Use only '.', '-' and '/')");
-            error.Add("#ERROR03: Morse Code Input contains an unregistered combination (See Morse Code Chart in the Help Window [?] for allowed symbol combinations)");
+
+            readLines = File.ReadAllLines(errorsPath);
+
+            foreach (string line in readLines)
+                errors.Add(line);
 
             // Set Enable false to translate button and copy button
             translateButton.Enabled = false;
