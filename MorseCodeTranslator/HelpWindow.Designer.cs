@@ -692,7 +692,6 @@
             this.label5.Size = new System.Drawing.Size(16, 325);
             this.label5.TabIndex = 1;
             this.label5.Text = "A\r\n\r\nB\r\n\r\nC\r\n\r\nD\r\n\r\nE\r\n\r\nF\r\n\r\nG\r\n\r\nH\r\n\r\nI\r\n\r\nJ\r\n\r\nK\r\n\r\nL\r\n\r\nM";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
