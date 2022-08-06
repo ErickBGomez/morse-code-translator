@@ -92,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="errors.txt" />
+    <Content Include="ico\Morse Code Translator Help Logo 32x.ico" />
+    <Content Include="ico\Morse Code Translator Main Logo 32x.ico" />
     <Content Include="morseCode.txt" />
     <Content Include="registeredSymbols.txt" />
   </ItemGroup>

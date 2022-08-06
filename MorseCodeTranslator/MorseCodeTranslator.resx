@@ -498,6 +498,82 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>310, 338</value>
   </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAKcAAACnAAAAAAAAAAAA
+        AAD///8A////ALKwrkCwrqywrauq/6upqP+pp6X/p6Wj/6Wjof+joZ//oZ+d/5+dm/+dm5n/m5mX/5mX
+        lf+YlZP/lpOR/5SSkP+SkI7/kY6M/4+Mi/+Ni4n/jImH/4uIhv+JhoT/iIWD/4eEgv+Gg4H/hYKAsISB
+        f0D///8A////AP///wC1s7Jgs7Gw/7Gvrf+vrKv/raup/6qop/+opqX/pqSi/6SioP+ioJ7/oJ6c/56c
+        mv+cmpj/m5iW/5mWlP+XlJL/lZKR/5ORj/+Sj43/kI2L/46Miv+Nioj/i4iH/4qHhf+JhoT/h4WD/4aD
+        gf+FgoD/hIF//4OAfmD///8Aube2QLa1s/+0s7H/srCv/7Curf+urKr/q6mo/6qnpv+npaT/paOi/6Oh
+        n/+hn53/n52b/52bmf+cmZf/mpeV/5iVlP+Wk5L/lJKQ/5OQjv+Rjoz/j42L/46Lif+Mioj/i4iG/4mG
+        hf+IhYP/h4SC/4aDgf+FgoD/hIF//4OAfkC6uLewuLa1/7a0sv+zsbD/sa+u/6+tq/+tq6n/q6mn/6im
+        pf+npKP/pKKg/6Ogn/+gnpz/n5yb/52amP+bmJb/mZaV/5eUk/+Vk5H/lJGP/5KPjf+Qjoz/j4yK/42K
+        if+MiYf/ioeG/4mGhP+HhYP/hoOC/4WCgP+EgX//g4B+sLu6uP+5uLb/t7W0/7Wzsv+ysa//sK6t/66s
+        q/+sqqj/qqim/6ilpP+mpKL/pKGg/6Gfnf+gnZz/npua/5yZmP+al5b/mJWU/5aUkv+UkpD/k5CO/5GO
+        jf+QjYv/jouJ/4yKiP+LiIb/ioeF/4iFhP+HhIL/hoOB/4WCgP+EgX//vbu6/7u5t/+4trX/trSz/7Sy
+        sP+ysK7/r62s/62rqv+rqaf/qael/6elo/+loqH/o6Gf/6Genf+fnJv/nZuZ/5uYl/+Zl5X/l5WT/5aT
+        kf+UkY//ko+O/5GOjP+PjIr/jYuJ/4yJh/+Kh4b/iYaE/4iFg/+HhIL/hYKA/4WCgP++vbv/vLq5/7q4
+        t/+3tbT/tbOy/7Oxr/+wrq3/r6yr/6yqqf+qqKf/qKak/6akov+koqD/oqCe/6CenP+enJr/nJmY/5qY
+        lv+YlpT/l5SS/5WSkP+TkY//kY+N/5CNi/+OjIr/jYqI/4uIh/+Kh4X/iIWE/4eEgv+Gg4H/hYKA/8C+
+        vf+9u7r/u7m4/7i3tf+2tbP/tLKx/7Kwr/+wrqz/rauq/6upqP+pp6X/p6Wk/6Wjof+joZ//oZ+d/5+d
+        m/+dm5n/m5mX/5qXlf+YlZP/lpOR/5SSkP+SkI7/kY6M/4+Mi/+Ni4n/jImH/4uIhv+JhoX/iIWD/4eE
+        gv+Gg4H/wb++/7+9vP+8urn/uri3/7i2tP+1s7L/s7Gw/7Gvrf+vrav/raup/6qop/+opqX/pqSi/6Si
+        oP+ioJ7/oJ6c/56cmv+cmpj/m5iW/5mWlP+XlJP/lZKR/5ORj/+Sj43/kI2L/4+Miv+Nioj/jImH/4qH
+        hf+JhoT/h4WD/4aDgf/Cwb//wL69/728uv+7urj/ube2/7e1tP+0s7H/srCv/7Curf+urKr/rKqo/6qn
+        pv+npaT/paOi/6Ohn/+hn53/n52b/56bmv+cmZf/mpeV/5iVlP+Wk5L/lJKQ/5OQjv+Rjoz/j42L/46L
+        if+Mioj/i4iG/4qHhf+IhYP/h4SC/8TCwf/BwL7/v728/727uv+6uLf/uLa1/7a0sv+0srD/sa+u/6+t
+        q/+tq6n/q6mn/6mnpf+npKP/paKh/6Ogn/+gnpz/n5yb/52amP+bmJf/mZaV/5eUk/+Vk5H/lJGP/5KP
+        jv+Qjoz/j4yK/42Kif+MiYf/ioeG/4mGhP+IhYP/xcTC/8PBwP/Av73/vry7/7y6uf+5uLb/rKqp/1pZ
+        Wf9CQkH/hIKC/66sq/+sqqn/qqim/6ilpP+mpKL/pKGg/6Kgnv+gnZz/npua/5yZmP+al5b/mJaU/5aU
+        kv+VkpD/k5CO/5GOjf+QjYv/jouJ/42KiP+LiIb/ioeF/4iFhP/GxcT/xMPB/8LAv/+/vbz/vbu6/7u5
+        t/85OTj/AAAA/wAAAP8AAAD/mZeW/62rqv+rqaf/qael/6elo/+loqH/o6Gf/6Genf+fnZv/nZuZ/5uY
+        l/+Zl5X/l5WT/5aTkf+UkY//kpCO/5GOjP+PjIr/jYuJ/4yJh/+LiIb/iYaE/8jGxf/GxMP/w8HA/8G/
+        vv++vbv/vLq5/wAAAP8AAAD/AAAA/wAAAP9ubWz/r6yr/6yqqf+qqKf/qKak/6akov+koqD/oqCe/6Ce
+        nP+enJr/nJqY/5qYlv+ZlpT/l5SS/5WSkP+TkY//kY+N/5CNi/+OjIr/jYqI/4uIh/+Kh4X/ycjH/8fF
+        xP/Ew8H/wsG//8C+vf+9vLr/Li4t/wAAAP8AAAD/AAAA/5yamf+wrqz/rqyq/6upqP+pp6X/p6Wk/6Wj
+        of+joZ//oZ+d/5+dm/+dm5n/m5mX/5qXlf+YlZP/lpOS/5SSkP+SkI7/kY6M/4+Mi/+Oi4n/jImH/4uI
+        hv/Lycj/yMfF/8bEw//DwsH/wcC+/7+9vP+ko6L/UVBQ/zk4OP+Ih4X/s7Gw/7Gvrf+vrav/raup/6up
+        p/+opqX/p6Sj/6SioP+ioJ7/oJ6c/56cmv+dmpj/m5iW/5mWlP+XlJP/lZKR/5SRj/+Sj43/kI2L/4+M
+        iv+Nioj/jImH/8zLyv/JyMf/x8bF/8XDwv/DwcD/wL69/768u/+7urj/ube2/7e1tP+0s7H/srGv/7Cu
+        rf+urKr/rKqo/6qnpv+opaT/paOi/6ShoP+hn53/n52b/56bmv+cmZf/mpeW/5iVlP+Wk5L/lJKQ/5OQ
+        jv+Rjo3/j42L/46Lif+Mioj/zczL/8vKyf/Jx8b/xsXE/8TCwf/BwL7/v728/727uv+7ubf/uLa1/7a0
+        sv+0srD/sa+u/6+trP+tq6n/lpSS/1RTUv9TUlH/UlFQ/1FQT/9QT07/T05N/05NTP9NTEv/TEtK/0tK
+        Sf+Vk5H/lJGP/5KPjv+Qjoz/j4yK/42Kif/Pzs3/zcvK/8rJx//IxsX/xcTC/8PBwP/Av73/vry7/7y6
+        uf+5uLb/t7W0/7Wzsv+zsa//sK6t/66sq/+Bf3//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/5aUkv+VkpD/k5CO/5GPjf+QjYv/jouJ/9HPzv/Ozcv/zMrJ/8nIxv/GxcT/xMPB/8LA
+        v//Avr3/vbu6/7u5t/+4t7X/trSz/7Sysf+ysK7/sK6s/4KAf/8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/mJWT/5aTkf+UkY//kpCO/5GOjP+PjIv/0tHQ/8/Ozf/NzMr/ysnI/8jH
+        xf/GxMP/w8HA/8G/vv++vbv/vLq5/7q4t/+4trT/tbOy/7Oxr/+xr63/joyL/ysqKv8qKin/Kikp/ykp
+        KP8pKCj/KCgn/ygnJ/8nJyb/JyYm/yYmJf+ZlpT/l5SS/5WSkf+TkY//kY+N/5CNi//T0tH/0dDP/87N
+        zP/Mysn/ycjH/8fFxP/Fw8L/wsG//8C+vf+9vLr/u7m4/7m3tv+2tbP/tLOx/7Kwr/+wrqz/rqyq/6up
+        qP+qp6b/p6Wk/6Wjov+joZ//oZ+d/5+dm/+dm5n/nJmX/5qXlf+YlZP/lpOS/5SSkP+TkI7/kY6M/9XT
+        0v/S0dD/0M7N/83My//Lycj/yMfF/8bEw//DwsH/wcC+/7+9vP+9u7r/uri3/7i2tP+2tLL/s7Gw/7Gv
+        rv+vrav/raup/6upp/+opqX/p6Sj/6SioP+joJ//oJ6c/56cmv+dmpj/m5iW/5mWlf+XlJP/lZKR/5SR
+        j/+Sj43/1tXU/9TT0f/R0M//z83M/8zLyv/Kycf/x8bF/8XEwv/DwcD/wL69/768u/+7urj/ubi2/7e1
+        tP+0s7H/srGv/7Curf+urKv/rKqo/6qopv+opaT/paOi/6ShoP+hn53/oJ2c/56bmv+cmZf/mpeW/5iV
+        lP+WlJL/lJKQ/5OQjv/Y19b/1dTT/9PS0f/Qz87/zs3L/8vKyf/Jx8b/xsXE/8TCwf/CwL//v728/727
+        uv+7ubf/uLa1/7a0s/+0srD/srCu/6+trP+tq6n/q6mn/6mnpf+npaP/paKh/6Ogn/+hnp3/n5yb/52b
+        mf+bmJf/mZeV/5eVk/+Vk5H/lJGP/9nY1//W1dT/1NPS/9HQz//Pzs3/zcvK/8rJyP/IxsX/xcTC/8PB
+        wP/Av73/vr27/7y6uf+5uLb/t7W0/7Wzsv+zsa//sK6t/6+sq/+sqqn/qqim/6impP+mpKL/pKKg/6Kg
+        nv+gnZz/npya/5yZmP+amJb/mJaU/5eUkv+VkpD/29rZ/9jX1v/W1NP/09LR/9HPzv/Ozcv/zMrJ/8nI
+        xv/HxcT/xMPB/8LAv//Avr3/vbu6/7u5uP+4t7X/trWz/7Sysf+ysK7/sK6s/62rqv+rqaj/qael/6el
+        o/+lo6H/o6Gf/6Gfnf+fnZv/nZuZ/5uZl/+Zl5X/mJWT/5aTkf/c29r/2tnY/9fW1f/V09L/0tHQ/9DO
+        zf/NzMr/ysnI/8jHxf/GxMP/w8LB/8G/vv+/vbz/vLq5/7q4t/+4trT/tbOy/7OxsP+xr63/r6yr/62r
+        qf+qqKf/qKal/6akov+koqD/oqCe/6CenP+enJr/nJqY/5uYlv+ZlpT/l5SS/9zb2rDb2tn/2djX/9bV
+        1P/T0tH/0dDP/87NzP/My8r/ycjH/8fFxP/Fw8L/wsG//8C+vf+9vLr/u7q4/7m3tv+2tbP/tLOx/7Kw
+        r/+wrq3/rqyq/6upqP+qp6b/p6Wk/6Wjov+joZ//oZ+d/5+dm/+dm5n/nJmX/5qXlf+YlZSw3NvaQNzb
+        2v/a2dj/19bV/9XU0//S0dD/0M7N/83My//Lycj/ycfG/8bEw//EwsH/wcC+/7+9vP+9u7r/uri3/7i2
+        tf+2tLL/s7Gw/7Gvrv+vrav/raup/6upp/+pp6X/p6Sj/6SioP+joJ//oJ6c/5+cm/+dmpj/m5iW/5mW
+        lUD///8A3NvaYNzb2v/Z2Nf/1tXU/9TT0f/R0M//z83M/83Lyv/Kycf/x8bF/8XEwv/DwcD/wL+9/768
+        u/+7urj/ubi2/7e1tP+1s7L/srGv/7Curf+urKv/rKqo/6qopv+opaT/pqSi/6ShoP+hn53/oJ2c/56b
+        mv+cmZhg////AP///wD///8A3NvaQNva2bDY19b/1tTT/9PS0f/Qz87/zs3L/8vKyf/JyMb/xsXE/8TC
+        wf/CwL//v728/727uv+7ubf/uLa1/7a0s/+0srD/srCu/6+trP+tq6r/q6mn/6mnpf+npaP/paKh/6Oh
+        n/+hnp2wn5ybQP///wD///8AwAAAA4AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAgAAAAcAAAAM=
+</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
