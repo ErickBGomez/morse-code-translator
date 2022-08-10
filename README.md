@@ -40,6 +40,15 @@ These sections will demonstrate how to use the application:
 <p align="center"><img alt="Output Section. Plain Text Output is being shown here" src="https://user-images.githubusercontent.com/90425287/183973118-933bb909-62bd-49ea-9e98-36b83b466a7a.png"></p>
 
 
+## Copy the Output result
 
+You can copy the displayed result to the output section in the following ways:
+
+- Selecting the text and pressing the key combination CTRL + C
+- Or by clicking on the "Copy Text" button. On your left side a blue text will appear confirming that the text has been copied to your clipboard
+
+<p align="center"><img alt="Copy text Button with a confirmation message" src="https://user-images.githubusercontent.com/90425287/183974520-f238bb27-0775-410d-ae86-53bec979620c.png"></p>
+
+## 
 
 
