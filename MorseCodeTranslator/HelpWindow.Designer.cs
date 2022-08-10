@@ -122,7 +122,7 @@
             this.textCopiedLabel.AutoSize = true;
             this.textCopiedLabel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.textCopiedLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textCopiedLabel.Location = new System.Drawing.Point(193, 342);
+            this.textCopiedLabel.Location = new System.Drawing.Point(193, 345);
             this.textCopiedLabel.Name = "textCopiedLabel";
             this.textCopiedLabel.Size = new System.Drawing.Size(142, 13);
             this.textCopiedLabel.TabIndex = 7;
@@ -132,7 +132,7 @@
             // copyExampleButton
             // 
             this.copyExampleButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.copyExampleButton.Location = new System.Drawing.Point(341, 310);
+            this.copyExampleButton.Location = new System.Drawing.Point(341, 313);
             this.copyExampleButton.Name = "copyExampleButton";
             this.copyExampleButton.Size = new System.Drawing.Size(75, 23);
             this.copyExampleButton.TabIndex = 6;
@@ -143,7 +143,7 @@
             // exampleMorseTextBox
             // 
             this.exampleMorseTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exampleMorseTextBox.Location = new System.Drawing.Point(80, 310);
+            this.exampleMorseTextBox.Location = new System.Drawing.Point(80, 313);
             this.exampleMorseTextBox.Name = "exampleMorseTextBox";
             this.exampleMorseTextBox.ReadOnly = true;
             this.exampleMorseTextBox.Size = new System.Drawing.Size(255, 20);
@@ -153,7 +153,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(10, 127);
+            this.label3.Location = new System.Drawing.Point(10, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(470, 136);
             this.label3.TabIndex = 3;
@@ -163,7 +163,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 101);
+            this.label2.Location = new System.Drawing.Point(7, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(235, 13);
             this.label2.TabIndex = 2;
@@ -173,7 +173,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(10, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 62);
+            this.label1.Size = new System.Drawing.Size(470, 69);
             this.label1.TabIndex = 4;
             this.label1.Text = resources.GetString("label1.Text");
             // 
