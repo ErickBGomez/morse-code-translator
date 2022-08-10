@@ -44,11 +44,18 @@ These sections will demonstrate how to use the application:
 
 You can copy the displayed result to the output section in the following ways:
 
-- Selecting the text and pressing the key combination CTRL + C
-- Or by clicking on the "Copy Text" button. On your left side a blue text will appear confirming that the text has been copied to your clipboard
+- Selecting the text and pressing the key combination CTRL + C.
+- Or by clicking on the "Copy Text" button. On its left side a blue text will appear confirming that the text has been copied to your clipboard.
 
 <p align="center"><img alt="Copy text Button with a confirmation message" src="https://user-images.githubusercontent.com/90425287/183974520-f238bb27-0775-410d-ae86-53bec979620c.png"></p>
 
-## 
+## See the help window for more information
 
+You can open the help window with the small button with the question mark "?" located at the bottom left of the window.
+
+<p align="center"><img alt="Location of the Help Button" src="https://user-images.githubusercontent.com/90425287/183975633-cc8d3b4b-fc57-4895-bf28-dced1ccc3ddb.png"></p>
+
+There you will find the same guide on how to use the program, a sample text to demonstrate the operation of the program, as well as the International Morse Code Chart, containing all the characters that the program allows to translate.
+
+<p align="center"><img alt="International Morse Code Chart in the Help Window" src="https://user-images.githubusercontent.com/90425287/183975491-43d27a75-3e53-4660-87a0-b0d6cf345e23.png"></p>
 
