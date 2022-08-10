@@ -28,5 +28,18 @@ These sections will demonstrate how to use the application:
 <p align="center"><img alt="Output Section. Morse Code Output is being shown here" src="https://user-images.githubusercontent.com/90425287/183970215-2ff0f1bf-b2be-42d3-a82a-eb0c6f4d992c.png"></p>
 
 
+## Convert Morse Code into Plain Text
+
+1. In the "Type of Input" section select the "Morse" option to be able to write dots "." and dashes "-" to create letters, a space to separate each letter, slashes "/" to separate words.
+<p align="center"><img alt="Type of Input Section. Morse Code selected" src="https://user-images.githubusercontent.com/90425287/183972558-1974fd37-d441-4ec1-b759-d19108739af5.png"></p>
+
+2. In the "Enter Your Input:" section type what you want to be translated, and then click the "Translate" button, or press the Enter key.
+<p align="center"><img alt="Enter your Input Section with a SAMPLE TEXT in Morse Code" src="https://user-images.githubusercontent.com/90425287/183972860-480011cf-ad81-4e1a-b093-32346f243f1c.png"></p>
+
+3. The result you will get is going to be shown in Plain Text in the "Output" section.
+<p align="center"><img alt="Output Section. Plain Text Output is being shown here" src="https://user-images.githubusercontent.com/90425287/183973118-933bb909-62bd-49ea-9e98-36b83b466a7a.png"></p>
+
+
+
 
 
